@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\franc\OneDrive\Área de Trabalho\HackerRank\HackerRank\.metadata\.plugins\org.eclipse.jdt.core
+1509799344.index
+2760263107.index
+1865797976.index

@@ -1,0 +1,6 @@
+package preimeiraSemana;
+
+public class teste {
+long a = Long.MAX_VALUE;
+System.out.println(a);
+}
