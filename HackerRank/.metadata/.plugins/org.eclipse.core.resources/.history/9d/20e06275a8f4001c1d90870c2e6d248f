@@ -21,19 +21,19 @@ public class JavaDatatypes {
 					if (npf > Integer.parseInt(LP.substring(18))) {
 						System.out.println(n + " can't be fitted anywhere.");
 					}else {
-						System.out.println(n + " can be fitted in:\n* long");
+						System.out.println(n + " can be fitted in:\n* byte\n* short\n* int\n* long");
 					}
 				}
-			}else if (n.startsWith("-") && n.length() == 20) {
+			}else if (n.startsWith("-") && n.replace("-", "").length() == 19) {
 				long nn = Long.parseLong(n.substring(0, 19));
 				if (nn < Long.parseLong(LN.substring(0, 19))) {
 					System.out.println(n + " can't be fitted anywhere.");
-				} else if (nn == Long.parseLong(LN.substring(0, 19))) {
-					int nnf = Integer.parseInt(n.substring(19));
-					if (nnf > Integer.parseInt(LN.substring(19))) {
+				} else if (nn == Long.parseLong(LP.substring(0, 19))) {
+					int npf = Integer.parseInt(n.substring(19));
+					if (npf > Integer.parseInt(LP.substring(19))) {
 						System.out.println(n + " can't be fitted anywhere.");
 					}else {
-						System.out.println(n + " can be fitted in:\n* long");
+						System.out.println(n + " can be fitted in:\n* byte\n* short\n* int\n* long");
 					}
 				}
 			}else if (Long.parseLong(n) <= Byte.MAX_VALUE && Long.parseLong(n) >= Byte.MIN_VALUE) {
@@ -46,6 +46,9 @@ public class JavaDatatypes {
 				System.out.println(n + " can be fitted in:\n* long");
 			}
 		}
+		System.out.println(LP.length());
+		System.out.println(Long.MAX_VALUE);
+		System.out.println(Long.parseLong(LP.substring(0, 18)));
 		ent.close();
 	}
 }
