@@ -1,0 +1,9 @@
+package introduction;
+
+import java.util.Scanner;
+
+public class EndOfFile {
+	Scanner ent = new Scanner(System.in);
+	
+	ent.close();
+}
