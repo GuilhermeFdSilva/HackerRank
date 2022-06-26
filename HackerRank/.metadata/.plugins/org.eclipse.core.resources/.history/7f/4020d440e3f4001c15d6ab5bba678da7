@@ -2,7 +2,7 @@ package introduction;
 
 import java.util.Scanner;
 
-public class JavaDatatypes {
+public class JavaDatatypes2 {
 	public static void main(String[] args) {
 		Scanner ent = new Scanner(System.in);
 		int T = ent.nextInt();
