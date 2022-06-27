@@ -1,0 +1,13 @@
+package strings;
+
+import java.util.Scanner;
+
+public class teste {
+	public static void main(String[] args) {
+		Scanner ent = new Scanner (System.in);
+		String a = "aaa";
+		String b = "";
+		System.out.println(a.compareTo(b));
+		ent.close();
+	}
+}

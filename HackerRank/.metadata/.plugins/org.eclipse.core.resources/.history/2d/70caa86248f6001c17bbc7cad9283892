@@ -1,0 +1,17 @@
+package strings;
+
+import java.util.Scanner;
+
+public class teste {
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		String A = "java";
+		String B = "hello";
+		if(A.compareTo(B) == 1) {
+			System.out.println("Yes");
+		}else {
+			System.out.println("No");
+		}
+		ent.close();
+	}
+}

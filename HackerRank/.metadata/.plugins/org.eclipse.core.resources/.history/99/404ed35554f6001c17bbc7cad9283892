@@ -1,0 +1,15 @@
+package strings;
+
+import java.util.Scanner;
+
+public class teste {
+	public static void main(String[] args) {
+		Scanner ent = new Scanner (System.in);
+		String a = "com";
+		String b = "ava";
+		System.out.println(a.compareTo(b));
+		String w = "welcomejava";
+		System.out.println(w.substring(1, 4));
+		ent.close();
+	}
+}
