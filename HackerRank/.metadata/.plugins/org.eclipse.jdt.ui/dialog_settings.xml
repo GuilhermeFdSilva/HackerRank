@@ -37,4 +37,7 @@
 		<item key="patterns" value="*"/>
 		<item key="renameSubpackages" value="true"/>
 	</section>
+	<section name="RenameInformationPopup">
+		<item key="snap_position" value="2"/>
+	</section>
 </section>

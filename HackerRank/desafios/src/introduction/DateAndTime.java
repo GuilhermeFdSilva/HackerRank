@@ -9,36 +9,34 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class DateAndTime {
-	
+	@SuppressWarnings("static-access")
+	public static String findDay(int month, int day, int year) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(calendar.MONTH, month - 1);
+		calendar.set(calendar.DAY_OF_MONTH, day);
+		calendar.set(calendar.YEAR, year);
+		String dayOfWeek = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.US).toUpperCase();
+		return dayOfWeek;
+	}
 
-    public static String findDay(int month, int day, int year) {
-    	Calendar calendar = Calendar.getInstance();
-        calendar.set(year, month, day);
-        String dayOfWeek = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.US);
-        return dayOfWeek;
-    }
+	public static void main(String[] args) throws IOException {
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-}
+		String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
-public class Solution {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+		int month = Integer.parseInt(firstMultipleInput[0]);
 
-        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+		int day = Integer.parseInt(firstMultipleInput[1]);
 
-        int month = Integer.parseInt(firstMultipleInput[0]);
+		int year = Integer.parseInt(firstMultipleInput[2]);
 
-        int day = Integer.parseInt(firstMultipleInput[1]);
+		String res = DateAndTime.findDay(month, day, year);
 
-        int year = Integer.parseInt(firstMultipleInput[2]);
+		bufferedWriter.write(res);
+		bufferedWriter.newLine();
 
-        String res = DateAndTime.findDay(month, day, year);
-
-        bufferedWriter.write(res);
-        bufferedWriter.newLine();
-
-        bufferedReader.close();
-        bufferedWriter.close();
-    }
+		bufferedReader.close();
+		bufferedWriter.close();
+	}
 }
