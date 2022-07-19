@@ -7,14 +7,7 @@ public class StringReverse {
 
 		Scanner sc = new Scanner(System.in);
 		String A = sc.next();
-		int al = A.length() - 1;
-		String B = A.substring(al);
-		int i = al;
-		for(int j = al - 1; j >= 0; j--) {
-			String b = A.substring(j, i);
-			i--;
-			B += b;
-		}
+		String B = new StringBuilder(A).reverse().toString();
 		if(A.equals(B)) {
 			System.out.println("Yes");
 		}else {
